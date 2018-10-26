@@ -17,7 +17,7 @@ function stickyElements() {
 
 $(document).ready(function() {
 
-  $('a').click(function(event) {
+  $('a').click(function() {
     $.scrollTo($(this).attr('href'), 800);
   });
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 // Open property Info
 
-  $('.images li').click(function(event) {
+  $('.images li').click(function() {
     var image = $(this).find('img').attr('src');
     var infoText = $(this).find('.infoText').contents();
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
 
   // Close Property Info
 
-  $('.propmodalClose').click(function(event) {
+  $('.propmodalClose').click(function() {
     $('.propmodal').fadeOut(500, function() {
       $('.propmodal').css('display', 'none');
       $('.propmodalImage img').removeAttr('src');
